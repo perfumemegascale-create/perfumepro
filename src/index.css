@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-1 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-2 {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-3 {
+  font-family: "Oxygen", sans-serif;
+}
+
+.font-4 {
+  font-family: "Source Code Pro", monospace;
+}
+
+.font-5 {
+  font-family: "Encode Sans Condensed", sans-serif;
+}
+
+.font-6 {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.font-7 {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
