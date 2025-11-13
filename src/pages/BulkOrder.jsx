@@ -11,7 +11,7 @@ const BulkOrderForm = () => {
 
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
-
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const WEBSITE_SOURCE = "perfume"; 
 
   const handleChange = (e) => {
@@ -34,7 +34,7 @@ const BulkOrderForm = () => {
 
     try {
       const response = await fetch(
-        "http://10.27.1.106/perfume_backend/submit_bulk_orders.php",
+        `${API_BASE_URL}/submit_bulk_orders.php`,
         {
           method: "POST",
           headers: {
