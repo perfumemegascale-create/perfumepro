@@ -28,7 +28,6 @@ function Footer() {
         { name: "FAQ", id: "FAQ-section", path: "/" },
         { name: "Contact", id: "contactForm", path: "/" },
         { name: "Blog", id: "Blog-section", path: "/" },
-        { name: "Bulk Order", path: "/bulkorder" },
     ];
 
     const policiesLinks = [
@@ -117,6 +116,7 @@ function Footer() {
                                         {link.name}
                                     </button>
                                 </li>
+            <li><a href="/bulkorder"  className="text-[#db9767] hover:text-amber-900 transition text-left w-full" >Bulk Order</a></li>
                             ))}
                         </ul>
                     </div>
