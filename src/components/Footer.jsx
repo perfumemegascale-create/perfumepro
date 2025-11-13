@@ -28,6 +28,7 @@ function Footer() {
         { name: "FAQ", id: "FAQ-section", path: "/" },
         { name: "Contact", id: "contactForm", path: "/" },
         { name: "Blog", id: "Blog-section", path: "/" },
+        { name: "Bulk Order", path: "/bulkorder" },
     ];
 
     const policiesLinks = [
