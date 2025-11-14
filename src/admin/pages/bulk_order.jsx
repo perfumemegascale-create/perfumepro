@@ -14,6 +14,7 @@ const BulkOrder = () => {
     { key: "quantity", label: "Quantity" },
     { key: "enquiry_message", label: "Enquiry Message" },
     { key: "source", label: "Source" }, 
+    { key: "Submitted On", label: "Submitted On" },
   ];
 
   const [orders, setOrders] = useState([]);
