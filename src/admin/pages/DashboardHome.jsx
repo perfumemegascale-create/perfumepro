@@ -19,6 +19,8 @@ const DashboardHome = () => {
     { key: "perfume", label: "Perfume", color: "#FF7F0E" },
     { key: "attar", label: "Attar", color: "#2CA02C" },
     { key: "ghee", label: "Ghee", color: "#D62728" },
+    { key: "mohanthal", label: "Mohanthal", color: "#C8963E" },
+    { key: "churma", label: "Laddu", color: "#E6B325" },
   ];
 
 
@@ -31,6 +33,8 @@ const DashboardHome = () => {
             perfumes: data.data.perfume,
             attars: data.data.attar,
             ghee: data.data.ghee,
+            mohanthal: data.data.mohanthal,
+            churma: data.data.churma,
             totalProducts: data.data.total,
           });
           setRecentActivity(data.data.recentActivity);
@@ -70,6 +74,18 @@ const DashboardHome = () => {
       color: "#5B3A29",
     },
     {
+      title: "Mohanthal",
+      value: stats.mohanthal,
+      icon: <Leaf className="w-6 h-6" />,
+      color: "#5B3A29",
+    },
+    {
+      title: "Churma Laddu",
+      value: stats.churma,
+      icon: <Leaf className="w-6 h-6" />,
+      color: "#5B3A29",
+    },
+    {
       title: "Total Leads",
       value: stats.totalProducts,
       icon: <ShoppingBag className="w-6 h-6" />,
@@ -97,26 +113,30 @@ const DashboardHome = () => {
         </div>
 
         {/* Stats Circles */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        {/* Stats Section — Clean Modern Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 mb-12">
           {statItems.map((item, i) => (
             <div
               key={i}
-              className="relative bg-white/60 backdrop-blur-xl rounded-full w-56 h-56 flex flex-col items-center justify-center shadow-lg border border-[#5B3A29]/30 mx-auto"
+              className="bg-white/70 backdrop-blur-lg border border-[#5B3A29]/20 shadow-md rounded-3xl p-6 flex items-center gap-5 hover:shadow-xl transition-all duration-300"
             >
+              {/* Icon */}
               <div
-                className={`absolute top-4 p-4 rounded-full`}
+                className="p-4 rounded-2xl shadow-md"
                 style={{ backgroundColor: item.color, color: "white" }}
               >
                 {item.icon}
               </div>
-              <h3 className="mt-20 text-[#5B3A29] text-lg font-semibold">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-3xl font-bold text-[#5B3A29]">{item.value}</p>
-              <TrendingUp className="absolute bottom-4 w-6 h-6 text-[#5B3A29]" />
+
+              {/* Title + Value */}
+              <div>
+                <h3 className="text-[#5B3A29] font-semibold text-xl">{item.title}</h3>
+                <p className="text-4xl font-extrabold text-[#5B3A29] mt-1">{item.value}</p>
+              </div>
             </div>
           ))}
         </div>
+
 
         <div className="flex justify-end mb-6">
           <div className="relative">
@@ -245,6 +265,8 @@ const DashboardHome = () => {
                     <Bar dataKey="perfume" fill="#FF7F0E" name="Perfume" radius={[6, 6, 0, 0]} />
                     <Bar dataKey="attar" fill="#2CA02C" name="Attar" radius={[6, 6, 0, 0]} />
                     <Bar dataKey="ghee" fill="#D62728" name="Ghee" radius={[6, 6, 0, 0]} />
+                    <Bar dataKey="mohanthal" fill="#C8963E" name="Mohanthal" radius={[6, 6, 0, 0]} />
+                    <Bar dataKey="churma" fill="#E6B325" name="Churma" radius={[6, 6, 0, 0]} />
                   </>
                 ) : (
                   <Bar
@@ -295,6 +317,24 @@ const DashboardHome = () => {
                   }}></span>
                   <span style={{ fontSize: "13px", color: "#5B3A29", fontWeight: 500 }}>Ghee</span>
                 </div>
+                <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                  <span style={{
+                    width: "12px",
+                    height: "12px",
+                    borderRadius: "50%",
+                    backgroundColor: "#C8963E"
+                  }}></span>
+                  <span style={{ fontSize: "13px", color: "#5B3A29", fontWeight: 500 }}>Mohanthal</span>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                  <span style={{
+                    width: "12px",
+                    height: "12px",
+                    borderRadius: "50%",
+                    backgroundColor: "#E6B325"
+                  }}></span>
+                  <span style={{ fontSize: "13px", color: "#5B3A29", fontWeight: 500 }}>Churma</span>
+                </div>
               </div>
             )}
           </div>
@@ -319,6 +359,8 @@ const DashboardHome = () => {
                 <Line type="monotone" dataKey="perfume" stroke="#F59E0B" strokeWidth={3} dot={{ r: 4 }} /> {/* Amber/Orange */}
                 <Line type="monotone" dataKey="attar" stroke="#10B981" strokeWidth={3} dot={{ r: 4 }} />   {/* Green */}
                 <Line type="monotone" dataKey="ghee" stroke="#3B82F6" strokeWidth={3} dot={{ r: 4 }} />    {/* Blue */}
+                <Line type="monotone" dataKey="mohanthal" stroke="#C8963E" strokeWidth={3} dot={{ r: 4 }} />    {/* Blue */}
+                <Line type="monotone" dataKey="churma" stroke="#E6B325" strokeWidth={3} dot={{ r: 4 }} />    {/* Blue */}
 
               </LineChart>
             </ResponsiveContainer>
@@ -359,6 +401,24 @@ const DashboardHome = () => {
                   }}></span>
                   <span style={{ fontSize: "13px", color: "#5B3A29", fontWeight: 500 }}>Ghee</span>
                 </div>
+                 <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                  <span style={{
+                    width: "12px",
+                    height: "12px",
+                    borderRadius: "50%",
+                    backgroundColor: "#C8963E"
+                  }}></span>
+                  <span style={{ fontSize: "13px", color: "#5B3A29", fontWeight: 500 }}>Mohanthal</span>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                  <span style={{
+                    width: "12px",
+                    height: "12px",
+                    borderRadius: "50%",
+                    backgroundColor: "#E6B325"
+                  }}></span>
+                  <span style={{ fontSize: "13px", color: "#5B3A29", fontWeight: 500 }}>Churma</span>
+                </div>
               </div>
             )}
           </div>
@@ -385,7 +445,7 @@ const DashboardHome = () => {
         </div>
 
         {/* Footer */}
-        <div className="text-center text-[#5B3A29]/80 text-sm mt-10 py-6 border-t border-[#5B3A29]/30"> 
+        <div className="text-center text-[#5B3A29]/80 text-sm mt-10 py-6 border-t border-[#5B3A29]/30">
           <p>
             © {new Date().getFullYear()} Fragrance & Wellness — Crafted with 💛 Megascale
           </p>
