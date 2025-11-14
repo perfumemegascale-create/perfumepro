@@ -1,7 +1,7 @@
 // ==== src/admin/components/Sidebar.jsx ====
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { Home, Flower2, FlaskConical, Leaf, ChevronLeft, LogOut, Boxes } from "lucide-react";
+import { Home, Flower2, FlaskConical, Leaf, ChevronLeft, LogOut, Boxes, Candy  } from "lucide-react";
 
 const Sidebar = ({ isOpen, onClose }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -14,6 +14,8 @@ const Sidebar = ({ isOpen, onClose }) => {
     { to: "/admin/dashboard/perfume", icon: Flower2, label: "Perfume" },
     { to: "/admin/dashboard/attar", icon: FlaskConical, label: "Attar" },
     { to: "/admin/dashboard/gircowghee", icon: Leaf, label: "GirCowGhee" },
+    { to: "/admin/dashboard/mohanthal", icon: Candy, label: "Mohanthal" },
+    { to: "/admin/dashboard/churmaladdu", icon: Candy, label: "Churma Laddu" },
     { to: "/admin/dashboard/bulk_order", icon: Boxes, label: "Bulk Order" },
   ];
 
