@@ -18,6 +18,8 @@ const PerfumeCustomers = () => {
     { key: "occasions", label: "Occasions" },
     { key: "intensity", label: "Intensity" },
     { key: "favoritePerfumes", label: "Favorite Perfumes" },
+    { key: "Submitted On", label: "Submitted On" },
+
   ];
 
   const [customers, setCustomers] = useState([]);
