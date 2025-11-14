@@ -7,6 +7,8 @@ import Perfume from "./pages/Perfume";
 import Attar from "./pages/Attar";
 import GirCowGhee from "./pages/GirCowGhee";
 import BulkOrder from "./pages/bulk_order";
+import Mohanthal from "./pages/Mohanthal";
+import ChurmaLaddu from "./pages/ChurmaLaddu";
 
 const AdminDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -35,6 +37,8 @@ const AdminDashboard = () => {
             <Route path="/attar" element={<Attar />} />
             <Route path="/gircowghee" element={<GirCowGhee />} />
             <Route path="/bulk_order" element={<BulkOrder />} />
+            <Route path="/mohanthal" element={<Mohanthal />} />
+            <Route path="/churmaladdu" element={<ChurmaLaddu />} />
 
             {/* Redirect any unknown route */}
             <Route path="*" element={<Navigate to="/" replace />} />
