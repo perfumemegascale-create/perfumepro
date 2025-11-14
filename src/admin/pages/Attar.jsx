@@ -16,6 +16,8 @@ const AttarCustomerTable = () => {
     { key: "occasions", label: "Occasions" },
     { key: "intensity", label: "Intensity" },
     { key: "preferredAttar", label: "Favorite Attars" },
+    { key: "Submitted On", label: "Submitted On" },
+
   ];
 
   const [customers, setCustomers] = useState([]);
